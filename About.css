@@ -1,0 +1,935 @@
+/* Скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Фон фіксований, текст скролиться */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #2f2f2f;
+    overflow: auto;
+    background-image: url('sarah-dorweiler-czTrCBj1TdU-unsplash.jpg'); /* Шлях до вашого зображення */
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фіксує фон */
+    background-clip: border-box; /* Додано для коректного відображення */
+}
+
+/* Останні стилі залишаються без змін */
+
+
+/* Додаткові класи для позиціонування тексту */
+.move-lower-left {
+    margin-top: 100px; /* Рух вниз */
+    margin-left: 50px; /* Рух ліворуч */
+}
+
+.move-lower-left-transform {
+    transform: translate(-50px, 100px); /* Альтернативний рух: ліворуч і вниз */
+}
+
+
+
+.container {
+    margin: 2rem auto;
+    padding: 12rem 10rem; /* Додано більше відступів для зсуву тексту вниз і лівіше */
+    max-width: 1200px;
+    border-radius: 10px;
+    margin-left: -30vh;
+    text-align: left; /* Вирівнює текст по лівому краю */
+    line-height: 2.5; /* Робить текст більш розтягнутим для кращого вигляду */
+
+}
+
+
+/* Логотип */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2f2f2f;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #a89c86;
+    font-weight: 300;
+}
+
+/* Навігація */
+header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #6f6f6f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #2f2f2f;
+    opacity: 1;
+}
+
+
+/* Загальні стилі тексту */
+.profile {
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 4rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.profile-header .line {
+    flex-grow: 1;
+    height: 4px;
+    background: #a89c86;
+}
+
+.profile-content {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.profile-content .highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #a89c86;
+}
+
+
+
+.education {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8); /* Легкий та свіжий градієнт */
+    border-radius: 20px; /* Округлені кути */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* Легша, але об’ємніша тінь */
+    padding: 3rem 2rem; /* Більше простору для контенту */
+    margin-bottom: 2rem; /* Відстань між секціями */
+    font-family: 'Lora', serif; /* Шрифт для більш елегантного вигляду */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний ефект наведення */
+    margin: 0 1.5rem; /* Відступи з боків */
+    overflow: hidden; /* Запобігає виходу контенту за межі */
+}
+
+.education:hover {
+    transform: translateY(-10px); /* Плавне підняття з більшим ефектом */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Більш виразна тінь */
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.education-header h2 {
+    font-size: 2.4rem; /* Трохи більший заголовок для кращого акценту */
+    font-weight: 600;
+    color: #2d2d2d; /* Темніший колір для контрасту */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Ширший міжбуквений інтервал */
+    text-align: center; /* Центруємо заголовок */
+}
+
+.education-header .line {
+    flex-grow: 1;
+    height: 4px;
+    background: linear-gradient(90deg, #d4c4a8, #a89c86); /* Стильний градієнт */
+    border-radius: 2px;
+}
+
+.education-content p {
+    font-size: 1.2rem; /* Збільшено шрифт для легшого читання */
+    color: #555555; /* Темніше сіре для тексту */
+    line-height: 1.8;
+    margin-bottom: 1.8rem; /* Рівномірний відступ між абзацами */
+}
+
+.education-content em {
+    font-style: italic;
+    color: #a89c86;
+    font-weight: 500;
+}
+
+.education-content p:last-child {
+    margin-bottom: 0; /* Вирівнювання останнього абзацу */
+}
+
+/* Анімація при скролінгу */
+.education {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.9s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: grid;
+    gap: 20px; /* Збільшено відстань між елементами для більш просторого вигляду */
+}
+
+
+
+
+.heading {
+    text-align: center;
+    font-size: 50px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.skills-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.skill-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #444;
+    margin: 40px 0;
+    position: relative;
+}
+
+.skill-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #d8c9b3;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skill-card {
+    position: relative;
+    background: linear-gradient(135deg, #f9f9f9, #f2f2f2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #555;
+    margin: 20px 0 10px;
+}
+
+.skill-info {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.skill-level {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 70px;
+    height: 70px;
+    background: #f5ebe2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #a7845c;
+    border: 4px solid #dbc5af;
+}
+
+/* Кольорове кодування для рівнів з пастельно-бежевими тонами */
+.skill-card:nth-child(1) .skill-level {
+    background: #fbeae1;
+    color: #d69b84;
+    border-color: #d69b84;
+}
+
+.skill-card:nth-child(2) .skill-level {
+    background: #f8ede6;
+    color: #bfa27d;
+    border-color: #bfa27d;
+}
+
+.skill-card:nth-child(3) .skill-level {
+    background: #f9e8df;
+    color: #c88a64;
+    border-color: #c88a64;
+}
+
+.skill-card:nth-child(4) .skill-level {
+    background: #f5e7de;
+    color: #a7845c;
+    border-color: #a7845c;
+}
+
+.skill-card:nth-child(5) .skill-level {
+    background: #fbeee4;
+    color: #c49978;
+    border-color: #c49978;
+}
+.skill-section {
+    margin: 0vh 0; /* Зменшення відстані між секціями */
+}
+
+.project-section {
+    width: 100%;
+    
+    position: relative;
+    
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-btn-grp {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    max-height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.project-img {
+    flex: 1;
+    height: 100%;
+    max-height: 500px;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(15px);
+    transition: filter 0.5s ease;
+}
+
+.project-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.project-background-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 20px;
+    z-index: 1;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.project-title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.project-info {
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.project-btn-grp {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.project-btn {
+    height: 40px;
+    font-size: 18px;
+    text-transform: capitalize;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.project-btn:hover {
+    background: #a89c86;
+}
+
+.project-btn.live {
+    background: none;
+    border: 2px solid #fff;
+}
+
+.project-btn.live:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-btn-grp {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hobbies {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8f0; /* Легкий бежевий фон */
+    margin: 0 1rem; /* Додає відступи з боків від стінок */
+}
+
+.hobbies h2 {
+    font-size: 2rem;
+    color: #5f4b41; /* М'який коричневий відтінок */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hobbies p {
+    font-size: 1.1rem;
+    color: #7d6e5b; /* Тонкий коричневий колір */
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.hobbies p::first-letter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d8a67d; /* М'який абрикосовий відтінок */
+    margin-right: 5px;
+}
+.certificates {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Вирівнює елементи по верхньому краю */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: none; /* Remove background */
+    margin-left: 2rem; /* Adds left margin to move closer to the left */
+    margin-top: 15rem; /* Adds top margin to distance from skills section */
+    width: 95%; /* Задає ширину контейнера на 80% від батьківського елемента */
+    max-width: 1200px; /* Максимальна ширина */
+    margin: 0 auto; /* Центрує контейнер */
+}
+
+.certificates-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.certificates-animation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.certificates-text {
+    text-align: left;
+    margin-left: 0; /* Виправлення: прибрано негативний відступ */
+    transform: translateX(var(--move-x, 0)); /* Використовує змінну для переміщення */
+    transition: transform 0.3s ease; /* Додає плавність до переміщення */
+    width: 100%; /* Задаємо ширину 100% для коректного вирівнювання */
+}
+
+.certificates-text ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0; /* Виправлення: прибрано негативний відступ */
+}
+
+.certificates-text ul li {
+    margin: 5px 0;
+}
+
+.certificates-text h2,
+.certificates-text ul li {
+    font-weight: 300; /* Тонший шрифт */
+}
+.contact {
+    background: linear-gradient(105deg, #f9f1e7, #e6d8b9); /* Дуже м'який пастельний градієнт */
+    border-radius: 12px; /* Легкі округлені краї */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Легка тінь для глибини */
+    padding: 1rem; /* Відступи всередині */
+    max-width: 730px; /* Максимальна ширина */
+    margin: 2rem auto; /* Центрування секції */
+    font-family: 'Lora', serif; /* Легкий елегантний шрифт */
+     margin-left: 1.2rem;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #777777; /* Ніжний сірий колір */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.contact strong {
+    color: #a79a7a; /* Теплий нейтральний відтінок для акцентів */
+    font-weight: 500;
+}
+
+.contact a {
+    color: #a79a7a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #3a3a3a; /* Зміна кольору при наведенні на посилання */
+}
+
+.contact p:last-child {
+    margin-bottom: 0; /* Прибираємо відступ після останнього абзацу */
+}
+.contact a {
+    color: #a79a7a; /* Теплий нейтральний колір */
+    text-decoration: none; /* Без підкреслення */
+    transition: color 0.3s ease; /* Плавна зміна кольору при наведенні */
+}
+
+.contact a:hover {
+    color: #3a3a3a; /* Зміна кольору при наведенні */
+    text-decoration: underline; /* Підкреслення посилання при наведенні */
+}
+/* Загальні відступи для всіх секцій */
+section {
+    margin-bottom: 40px; /* Встановлюємо однаковий відступ між секціями */
+}
+
+/* Для кожної секції можна додати специфічні стилі, якщо необхідно */
+.contact, .certificates, .hobbies, .skill-section, .project-section, .education, .profile {
+    padding: 20px;
+}
+/* Скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Фон фіксований, текст скролиться */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #2f2f2f;
+    overflow: auto;
+    background-image: url('sarah-dorweiler-czTrCBj1TdU-unsplash.jpg'); /* Шлях до вашого зображення */
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фіксує фон */
+    background-clip: border-box; /* Додано для коректного відображення */
+}
+
+/* Останні стилі залишаються без змін */
+
+
+.move-lower-left-transform {
+    transform: translate(-50px); /* Альтернативний рух: ліворуч і вниз */
+}
+
+.container {
+    margin: 2rem auto;
+    padding: 12rem 10rem; /* Додано більше відступів для зсуву тексту вниз і лівіше */
+    max-width: 1200px;
+    border-radius: 10px;
+    margin-left: -30vh;
+    text-align: left; /* Вирівнює текст по лівому краю */
+    line-height: 2.5; /* Робить текст більш розтягнутим для кращого вигляду */
+}
+
+/* Логотип */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2f2f2f;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #a89c86;
+    font-weight: 300;
+}
+
+/* Навігація */
+header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #6f6f6f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #2f2f2f;
+    opacity: 1;
+}
+
+/* Загальні стилі тексту */
+.profile {
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 4rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.profile-header .line {
+    flex-grow: 1;
+    height: 4px;
+    background: #a89c86;
+}
+
+.profile-content {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.profile-content .highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #a89c86;
+}
+
+.education {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8); /* Легкий та свіжий градієнт */
+    border-radius: 20px; /* Округлені кути */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* Легша, але об’ємніша тінь */
+    padding: 3rem 2rem; /* Більше простору для контенту */
+    margin-bottom: 2rem; /* Відстань між секціями */
+    font-family: 'Lora', serif; /* Шрифт для більш елегантного вигляду */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний ефект наведення */
+    margin: 0 1.5rem; /* Відступи з боків */
+    overflow: hidden; /* Запобігає виходу контенту за межі */
+}
+
+.education:hover {
+    transform: translateY(-10px); /* Плавне підняття з більшим ефектом */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Більш виразна тінь */
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.education-header h2 {
+    font-size: 2.4rem; /* Трохи більший заголовок для кращого акценту */
+    font-weight: 600;
+    color: #2d2d2d; /* Темніший колір для контрасту */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Ширший міжбуквений інтервал */
+    text-align: center; /* Центруємо заголовок */
+}
+
+.education-header .line {
+    flex-grow: 1;
+    height: 4px;
+    background: linear-gradient(90deg, #d4c4a8, #a89c86); /* Стильний градієнт */
+    border-radius: 2px;
+}
+
+.education-content p {
+    font-size: 1.2rem; /* Збільшено шрифт для легшого читання */
+    color: #555555; /* Темніше сіре для тексту */
+    line-height: 1.8;
+    margin-bottom: 1.8rem; /* Рівномірний відступ між абзацами */
+}
+
+.education-content em {
+    font-style: italic;
+    color: #a89c86;
+    font-weight: 500;
+}
+
+.education-content p:last-child {
+    margin-bottom: 0; /* Вирівнювання останнього абзацу */
+}
+
+/* Анімація при скролінгу */
+.education {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.9s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: grid;
+    gap: 20px; /* Збільшено відстань між елементами для більш просторого вигляду */
+}
+
+.skill-section {
+    position: relative;
+    padding: 50px 0;
+    border-radius: 15px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 50px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.skills-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.skill-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #444;
+    margin: 40px 0;
+    position: relative;
+}
+
+.skill-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #d8c9b3;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skill-card {
+    position: relative;
+    background: linear-gradient(135deg, #f9f9f9, #f2f2f2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #555;
+    margin: 20px 0 10px;
+}
+
+.skill-info {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.skill-level {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 70px;
+    height: 70px;
+    background: #f5ebe2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2f2f2f;
+}
+
+/* Зміни для кожного рівня навички */
+.skill-level-1 {
+    background: #bdbdbd;
+}
+
+.skill-level-2 {
+    background: #a89c86;
+}
+
+.skill-level-3 {
+    background: #4caf50;
+}

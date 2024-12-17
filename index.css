@@ -1,0 +1,119 @@
+/* Скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Встановлюємо однаковий шрифт */
+    font-size: 1rem; /* Встановлюємо однаковий розмір шрифту для всього тексту */
+}
+
+/* Основні стилі */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto; /* Дозволити вертикальний скролінг */
+    background-color: #f8f4f0;
+    color: #2f2f2f;
+    font-size: 1rem; /* Встановлюємо розмір шрифту для всього тіла */
+}
+
+/* Логотип */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3a3a3a;
+}
+
+/* Навігація */
+header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #6f6f6f;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #2f2f2f;
+}
+
+/* Основний контейнер */
+.container {
+    width: 100%; /* Займає всю ширину */
+    padding: 4rem 2rem; /* Додає відступи зверху і з боків */
+    margin-top: 6rem; /* Опускає контент вниз */
+    text-align: center;
+    line-height: 1.8; /* Міжрядковий інтервал для читабельності */
+}
+
+/* Оновлені стилі для секцій */
+section {
+    display: flex;
+    flex-direction: column; /* Встановлює вертикальне розташування */
+    align-items: center; /* Вирівнює по центру горизонтально */
+    justify-content: center; /* Центрує по вертикалі */
+    margin-bottom: 2rem; /* Відступ між секціями */
+    text-align: center; /* Текст по центру */
+}
+
+/* Стилі заголовків */
+section h2, section h3 {
+    font-size: 1.8rem; /* Одинаковий розмір для всіх заголовків */
+    color: #3a3a3a;
+    margin-bottom: 1rem; /* Відступ між заголовком і зображенням */
+}
+
+/* Галерея зображень */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.portfolio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стилі для зменшення зображень у секції спортивних купальників */
+.design img {
+    max-width: 60%; /* Зменшуємо максимальну ширину зображення */
+    margin: 0 auto; /* Центруємо зображення */
+}
+
+
+.portfolio img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Підвал */
+footer {
+    width: 100%; /* Займає всю ширину */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem; /* Відступ зверху */
+    background-color: #e4ded8;
+    color: #3a3a3a;
+    font-size: 1rem;
+}
